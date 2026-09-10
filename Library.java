@@ -64,14 +64,16 @@ public class Library {
     public static void main(String[] args) {
         Book book1 = new Book("The Great Gatsby", "F. Scott Fitzgerald");
         Book book2 = new Book("To Kill a Mockingbird", "Harper Lee");
-        Book book3 = new Book("1984", "George Orwell");
+        DVD dvd1 = new DVD("1984", "George Orwell");
 
         book1.displayDetails();
         book1.checkout();
         book1.checkout(); // Attempt to check out again
         book1.returnItem();
         book1.returnItem(); // Attempt to return again
-
+        dvd1.displayDetails();
+        dvd1.checkout();
+        dvd1.returnItem();
         System.out.println();
 
         book2.displayDetails();
