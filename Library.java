@@ -49,7 +49,7 @@ class Book extends LibraryItem {
     private int BookID;
     public Book(String title, String author) {
         super(title, author);
-        this.BookID = 0; // Default ID, can be set later
+        this.BookID = 101; // Default ID, can be set later
     }
 }
 class DVD extends LibraryItem {
