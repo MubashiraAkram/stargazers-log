@@ -47,24 +47,31 @@ public String getTitle () {
 }
 class Book extends LibraryItem {
     private int BookID;
-    public Book(String title, String author) {
+    public Book(String title, String author, int BookID) {
         super(title, author);
-        this.BookID = 101; // Default ID, can be set later
+        this.BookID = BookID;
+    }
+    public void displayDetails() {
+        super.displayDetails();
+        System.out.println("Book ID: " + this.BookID);
     }
 }
 class DVD extends LibraryItem {
     private int DVDID;
-    public DVD(String title, String author) {
+    public DVD(String title, String author, int DVDID) {
         super(title, author);
-        this.DVDID = 0; // Default ID, can be set later
+        this.DVDID = DVDID;
+    }
+    public void displayDetails() {
+        super.displayDetails();
+        System.out.println("DVD ID: " + this.DVDID);
     }
 }
-
-public class Library {
+class LibraryManagementSystem {
     public static void main(String[] args) {
-        Book book1 = new Book("The Great Gatsby", "F. Scott Fitzgerald");
-        Book book2 = new Book("To Kill a Mockingbird", "Harper Lee");
-        DVD dvd1 = new DVD("1984", "George Orwell");
+        Book book1 = new Book("The Great Gatsby", "F. Scott Fitzgerald", 1001);
+        Book book2 = new Book("To Kill a Mockingbird", "Harper Lee", 1002);
+        DVD dvd1 = new DVD("1984", "George Orwell", 1001);
 
         book1.displayDetails();
         book1.checkout();
