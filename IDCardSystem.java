@@ -25,7 +25,7 @@ class Employee {
         System.out.println("ID Card Number: " + this.idCard.getIdNumber());
     }
 }
-class IDCardSystem {
+public class IDCardSystem {
     public static void main(String[] args) {
         IDCard idCard1 = new IDCard(1001);
         Employee employee1 = new Employee("Smith", 12345, idCard1);
